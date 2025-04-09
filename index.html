@@ -1,11 +1,251 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Harwinderjit Singh</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harwinderjit Singh - Software Developer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        h3 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        .job-title, .education-title {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .job-company, .education-institution {
+            font-style: italic;
+        }
+        .job-period, .education-period {
+            color: #7f8c8d;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skills-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        .technical-skills {
+            margin-top: 20px;
+        }
+        .technical-skills h4 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        .technical-skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .technical-skills li {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 600px) {
+            .job-title, .education-title {
+                flex-direction: column;
+            }
+            .job-period, .education-period {
+                margin-top: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1 class="dec">
-    Comming Soon
-  </h1>
+    <header>
+        <h1>Harwinderjit Singh</h1>
+        <div class="contact-info">
+            North York, Ontario, M9L2H5 | +1 226-886-5459 | singhjitharwinder@gmail.com
+        </div>
+    </header>
+
+    <section>
+        <h2>Objective</h2>
+        <p>
+            Results-driven Software Developer with 4+ years of experience in designing and developing scalable web applications, e-commerce platforms, and custom WordPress solutions. Proficient in PHP, MySQL, RESTful APIs, React, NodeJS, payment gateway integrations, and backend systems for POS, CRM, and vendor management. Adept at problem-solving, collaborating with cross-functional teams, and delivering high-quality solutions on time. Seeking to leverage my technical expertise and creativity to contribute to innovative projects and drive business growth in a challenging environment.
+        </p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="job">
+            <div class="job-title">
+                <span class="job-company">Field Sale Representative | Kognitive Sales Solution</span>
+                <span class="job-period">Toronto | June 2024 - Present</span>
+            </div>
+            <ul>
+                <li>Promoted Canadian Tire credit card to customers, effectively communicating its benefits and features.</li>
+                <li>Educated customers on the financial benefits and rewards associated with the Canadian Tire credit card, enhancing customer satisfaction and loyalty.</li>
+                <li>Developed and implemented effective sales strategies to meet and exceed monthly credit card promotion targets.</li>
+                <li>Maintained up-to-date knowledge of Canadian Tire's products, services, and promotions to better inform and assist customers.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-title">
+                <span class="job-company">Software Developer | aetherss</span>
+                <span class="job-period">INDIA | Jan 2019 - Sep 2023</span>
+            </div>
+            <ul>
+                <li>Designed and developed custom e-commerce platforms from scratch, ensuring seamless user experiences and robust functionality.</li>
+                <li>Built and maintained CRM systems to streamline client management, improve customer engagement, and enhance business workflows.</li>
+                <li>Developed POS (Point of Sale) systems with backend APIs for efficient order processing, inventory management, and third-party integrations (e.g., Zomato, Swiggy).</li>
+                <li>Created and integrated RESTful APIs for smooth communication between frontend and backend systems, enabling scalable and efficient data exchange.</li>
+                <li>Implemented vendor management systems with payment flow automation, allowing secure transactions between vendors and users.</li>
+                <li>Integrated payment gateways (e.g., Stripe, PayPal, PayU and Razorpay) for secure and seamless payment processing in e-commerce and wallet systems.</li>
+                <li>Developed custom WordPress websites with tailored themes, plugins, and functionalities to meet client-specific requirements.</li>
+                <li>Designed and optimized MySQL, SQL databases for high-performance web applications, ensuring data integrity and scalability.</li>
+                <li>Collaborated with cross-functional teams to deliver end-to-end solutions, adhering to agile methodologies and ensuring timely project delivery.</li>
+                <li>Specialized in backend development, creating secure and scalable systems for e-commerce, CRM, and POS applications.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="education">
+            <div class="education-title">
+                <span class="education-institution">Post Graduate Diploma (Data Analytics for Business) | St Clair College</span>
+                <span class="education-period">Toronto | 2025</span>
+            </div>
+        </div>
+        <div class="education">
+            <div class="education-title">
+                <span class="education-institution">Master of Computer Application | KCL-IMT</span>
+                <span class="education-period">India | 2018</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills & Abilities</h2>
+        <div class="skills-container">
+            <div class="skills-column">
+                <ul>
+                    <li>Quick Learner: Ability to rapidly grasp new technologies, frameworks, and tools to deliver efficient solutions.</li>
+                    <li>Attention to Detail: Strong focus on writing clean, optimized, and error-free code for scalable applications.</li>
+                    <li>Problem-Solving: Proven ability to analyze complex issues, debug code, and implement effective solutions.</li>
+                    <li>Team Collaboration: Experience working in cross-functional teams, contributing to agile workflows, and ensuring project success.</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <ul>
+                    <li>Communication Skills: Excellent verbal and written communication skills for effective collaboration with stakeholders and clients.</li>
+                    <li>Customer-Centric Approach: Dedicated to understanding client needs and delivering tailored solutions that exceed expectations.</li>
+                    <li>Time Management: Skilled at prioritizing tasks, meeting deadlines, and managing multiple projects simultaneously.</li>
+                    <li>Leadership & Mentorship: Ability to guide junior developers, share knowledge, and foster a collaborative team environment.</li>
+                    <li>Adaptability: Thrives in dynamic environments, embracing new challenges and technologies with ease.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certificates & License</h2>
+        <ul>
+            <li>Advanced PHP</li>
+            <li>First AID with CPR C & AED, WHMIS Training & GMP Test</li>
+            <li>Valid Ontario Security License</li>
+            <li>G1</li>
+        </ul>
+    </section>
+
+    <section class="technical-skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skills-column">
+                <h4>Languages</h4>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                
+                <h4>Libraries/Framework</h4>
+                <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>CakePHP</li>
+                    <li>Django</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <h4>Analysis Tools</h4>
+                <ul>
+                    <li>RStudio</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>IBM Cognos</li>
+                </ul>
+                
+                <h4>Database</h4>
+                <ul>
+                    <li>SQL</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
+                
+                <h4>Integration</h4>
+                <ul>
+                    <li>Zomato</li>
+                    <li>Swiggy</li>
+                    <li>Stripe</li>
+                    <li>PayU</li>
+                    <li>Razorpay</li>
+                    <li>Google APIs</li>
+                </ul>
+                
+                <h4>Productivity Tools</h4>
+                <ul>
+                    <li>Microsoft Word</li>
+                    <li>Microsoft Excel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
