@@ -17,13 +17,13 @@ Results-driven Software Developer with 4+ years of experience specializing in:
 - Backend systems (POS, CRM, vendor management)
 
 ## 🛠 Technical Expertise
-| Category          | Technologies                          |
-|-------------------|---------------------------------------|
-| Languages         | JavaScript, PHP, Python, R, SQL      |
-| Frontend          | React, HTML/CSS, Bootstrap, jQuery    |
-| Backend           | Node.js, CakePHP, Django, REST APIs   |
-| Databases         | MySQL, MongoDB, SQL                   |
-| Tools/Platforms   | Tableau, Power BI, RStudio, WordPress |
+| Category          | Technologies                                               |
+|-------------------|------------------------------------------------------------|
+| Languages         | JavaScript, PHP, Python, R, SQL                            |
+| Frontend          | React.js, Next.js, HTML/CSS, Bootstrap, Tailwind, jQuery   |
+| Backend           | Node.js, CakePHP, Django, REST APIs                        |
+| Databases         | MySQL, MongoDB, SQL, MariaDB                               |
+| Tools/Platforms   | Tableau, Power BI, RStudio, WordPress                      |
 
 ## 💼 Development Services Offered
 I'm available for freelance projects or contract work in the following areas:
