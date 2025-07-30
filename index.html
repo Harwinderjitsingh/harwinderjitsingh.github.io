@@ -4,248 +4,568 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harwinderjit Singh - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#1e40af',
+                        'accent': '#3b82f6'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 20px;
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 5px;
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        .contact-info {
-            font-size: 16px;
-            color: #7f8c8d;
-            margin-bottom: 15px;
+        .tech-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
-        h2 {
-            color: #3498db;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 25px;
-        }
-        h3 {
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-        .job-title, .education-title {
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-        }
-        .job-company, .education-institution {
-            font-style: italic;
-        }
-        .job-period, .education-period {
-            color: #7f8c8d;
-        }
-        ul {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .skills-column {
-            flex: 1;
-            min-width: 250px;
-        }
-        .technical-skills {
-            margin-top: 20px;
-        }
-        .technical-skills h4 {
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-        .technical-skills ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .technical-skills li {
-            margin-bottom: 5px;
-        }
-        @media (max-width: 600px) {
-            .job-title, .education-title {
-                flex-direction: column;
-            }
-            .job-period, .education-period {
-                margin-top: 5px;
-            }
+        .skill-bar {
+            transition: width 2s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Harwinderjit Singh</h1>
-        <div class="contact-info">
-            North York, Ontario, M9L2H5 | +1 226-886-5459 | singhjitharwinder@gmail.com
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-primary">Harwinderjit Singh</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-primary transition-colors">Experience</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="hidden text-gray-700">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section>
-        <h2>Objective</h2>
-        <p>
-            Results-driven Software Developer with 4+ years of experience in designing and developing scalable web applications, e-commerce platforms, and custom WordPress solutions. Proficient in PHP, MySQL, RESTful APIs, React, NodeJS, payment gateway integrations, and backend systems for POS, CRM, and vendor management. Adept at problem-solving, collaborating with cross-functional teams, and delivering high-quality solutions on time. Seeking to leverage my technical expertise and creativity to contribute to innovative projects and drive business growth in a challenging environment.
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Harwinderjit Singh
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Full Stack Software Developer & Data Analytics Specialist
+                </p>
+                <p class="text-lg mb-12 max-w-3xl mx-auto opacity-80">
+                    4+ years of experience crafting scalable web applications, e-commerce platforms, and data-driven solutions that drive business growth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+               <div class="animate-slide-up">
+    <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4">Professional Journey</h3>
+        <p class="text-lg leading-relaxed mb-6">
+            A solutions-driven developer with 4+ years of web application experience and a Post Graduate Diploma in Data Analytics. I bridge technical expertise with business acumen, currently enhancing my client engagement skills in sales while transitioning to data-centric roles. My strength lies in crafting efficient, data-informed solutions that deliver measurable business value.
         </p>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        
-        <div class="job">
-            <div class="job-title">
-                <span class="job-company">Field Sale Representative | Kognitive Sales Solution</span>
-                <span class="job-period">Toronto | June 2024 - Present</span>
+        <div class="flex items-center space-x-4">
+            <div class="text-center">
+                <div class="text-3xl font-bold">4+</div>
+                <div class="text-sm opacity-90">Years Development</div>
             </div>
-            <ul>
-                <li>Promoted Canadian Tire credit card to customers, effectively communicating its benefits and features.</li>
-                <li>Educated customers on the financial benefits and rewards associated with the Canadian Tire credit card, enhancing customer satisfaction and loyalty.</li>
-                <li>Developed and implemented effective sales strategies to meet and exceed monthly credit card promotion targets.</li>
-                <li>Maintained up-to-date knowledge of Canadian Tire's products, services, and promotions to better inform and assist customers.</li>
-            </ul>
-        </div>
-        
-        <div class="job">
-            <div class="job-title">
-                <span class="job-company">Software Developer | aetherss</span>
-                <span class="job-period">INDIA | Jan 2019 - Sep 2023</span>
+            <div class="text-center">
+                <div class="text-3xl font-bold">20+</div>
+                <div class="text-sm opacity-90">Projects Delivered</div>
             </div>
-            <ul>
-                <li>Designed and developed custom e-commerce platforms from scratch, ensuring seamless user experiences and robust functionality.</li>
-                <li>Built and maintained CRM systems to streamline client management, improve customer engagement, and enhance business workflows.</li>
-                <li>Developed POS (Point of Sale) systems with backend APIs for efficient order processing, inventory management, and third-party integrations (e.g., Zomato, Swiggy).</li>
-                <li>Created and integrated RESTful APIs for smooth communication between frontend and backend systems, enabling scalable and efficient data exchange.</li>
-                <li>Implemented vendor management systems with payment flow automation, allowing secure transactions between vendors and users.</li>
-                <li>Integrated payment gateways (e.g., Stripe, PayPal, PayU and Razorpay) for secure and seamless payment processing in e-commerce and wallet systems.</li>
-                <li>Developed custom WordPress websites with tailored themes, plugins, and functionalities to meet client-specific requirements.</li>
-                <li>Designed and optimized MySQL, SQL databases for high-performance web applications, ensuring data integrity and scalability.</li>
-                <li>Collaborated with cross-functional teams to deliver end-to-end solutions, adhering to agile methodologies and ensuring timely project delivery.</li>
-                <li>Specialized in backend development, creating secure and scalable systems for e-commerce, CRM, and POS applications.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <div class="education">
-            <div class="education-title">
-                <span class="education-institution">Post Graduate Diploma (Data Analytics for Business) | St Clair College</span>
-                <span class="education-period">Toronto | 2025</span>
+            <div class="text-center">
+                <div class="text-3xl font-bold">100%</div>
+                <div class="text-sm opacity-90">Solution Focus</div>
             </div>
         </div>
-        <div class="education">
-            <div class="education-title">
-                <span class="education-institution">Master of Computer Application | KCL-IMT</span>
-                <span class="education-period">India | 2018</span>
+    </div>
+</div>
+                <div class="animate-slide-up">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-900">What I Do</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="code" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Full Stack Development</h4>
+                                <p class="text-gray-600">Building scalable web applications using React, Node.js, PHP, and modern frameworks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="shopping-cart" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">E-commerce Solutions</h4>
+                                <p class="text-gray-600">Creating robust e-commerce platforms with payment gateway integrations and inventory management.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Data Analytics</h4>
+                                <p class="text-gray-600">Leveraging tools like Tableau, Power BI, and R for data-driven insights and business intelligence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Skills & Abilities</h2>
-        <div class="skills-container">
-            <div class="skills-column">
-                <ul>
-                    <li>Quick Learner: Ability to rapidly grasp new technologies, frameworks, and tools to deliver efficient solutions.</li>
-                    <li>Attention to Detail: Strong focus on writing clean, optimized, and error-free code for scalable applications.</li>
-                    <li>Problem-Solving: Proven ability to analyze complex issues, debug code, and implement effective solutions.</li>
-                    <li>Team Collaboration: Experience working in cross-functional teams, contributing to agile workflows, and ensuring project success.</li>
-                </ul>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
             </div>
-            <div class="skills-column">
-                <ul>
-                    <li>Communication Skills: Excellent verbal and written communication skills for effective collaboration with stakeholders and clients.</li>
-                    <li>Customer-Centric Approach: Dedicated to understanding client needs and delivering tailored solutions that exceed expectations.</li>
-                    <li>Time Management: Skilled at prioritizing tasks, meeting deadlines, and managing multiple projects simultaneously.</li>
-                    <li>Leadership & Mentorship: Ability to guide junior developers, share knowledge, and foster a collaborative team environment.</li>
-                    <li>Adaptability: Thrives in dynamic environments, embracing new challenges and technologies with ease.</li>
-                </ul>
+            <div class="space-y-12">
+                <!-- Current Role -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Field Sales Representative</h3>
+                            <p class="text-lg text-primary font-semibold">Kognitive Sales Solutions</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                                June 2024 - Present
+                            </div>
+                            <p class="text-gray-600 mt-1">Toronto, Canada</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Interact with 200+ customers daily, promoting financial products</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Achieve 8-10 credit card applications/day, exceeding targets by 200%</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Develop effective sales strategies for Canadian Tire credit cards</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Boost overall company sales performance through personal initiatives</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Previous Role -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Software Developer</h3>
+                            <p class="text-lg text-primary font-semibold">Aether Software Solutions</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+                                Jan 2019 - Sep 2023
+                            </div>
+                            <p class="text-gray-600 mt-1">Chandigarh, India</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Developed 15+ responsive websites using WordPress and custom PHP</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Built CRM and POS systems for 20+ restaurants with third-party integrations</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Integrated payment gateways (Stripe, PayPal, Razorpay)</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Developed automated vendor payment flows with secure transactions</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Led development sprints using Agile methodologies</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                                <span>Enhanced SEO and engagement by 25% across projects</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Certificates & License</h2>
-        <ul>
-            <li>Advanced PHP</li>
-            <li>First AID with CPR C & AED, WHMIS Training & GMP Test</li>
-            <li>Valid Ontario Security License</li>
-            <li>G1</li>
-        </ul>
-    </section>
-
-    <section class="technical-skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skills-column">
-                <h4>Languages</h4>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>Python</li>
-                    <li>R</li>
-                    <li>SQL</li>
-                    <li>HTML/CSS</li>
-                </ul>
-                
-                <h4>Libraries/Framework</h4>
-                <ul>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>jQuery</li>
-                    <li>Bootstrap</li>
-                    <li>CakePHP</li>
-                    <li>Django</li>
-                </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
             </div>
-            <div class="skills-column">
-                <h4>Analysis Tools</h4>
-                <ul>
-                    <li>RStudio</li>
-                    <li>Tableau</li>
-                    <li>Power BI</li>
-                    <li>IBM Cognos</li>
-                </ul>
-                
-                <h4>Database</h4>
-                <ul>
-                    <li>SQL</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                </ul>
-                
-                <h4>Integration</h4>
-                <ul>
-                    <li>Zomato</li>
-                    <li>Swiggy</li>
-                    <li>Stripe</li>
-                    <li>PayU</li>
-                    <li>Razorpay</li>
-                    <li>Google APIs</li>
-                </ul>
-                
-                <h4>Productivity Tools</h4>
-                <ul>
-                    <li>Microsoft Word</li>
-                    <li>Microsoft Excel</li>
-                </ul>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Languages -->
+                <div class="tech-card bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl shadow-lg">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Languages</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">R</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Rust</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="tech-card bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-2xl shadow-lg">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Frameworks</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Django</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">CakePHP</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="tech-card bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-2xl shadow-lg">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="database" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Database & Tools</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MariaDB</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Git</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Tableau</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Power BI</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">RStudio</span>
+                    </div>
+                </div>
+
+                <!-- Integrations -->
+                <div class="tech-card bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-2xl shadow-lg">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">APIs & Integration</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">RESTful APIs</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Stripe</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">PayPal</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Razorpay</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Google APIs</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Zomato API</span>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Swiggy API</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- WingBoyz Project -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-r from-red-500 to-orange-500 h-48 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="dollar-sign" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold">WingBoyz</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Complete restaurant management system with online ordering website and kitchen order acceptance app for WingBoyz restaurant.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">MySQL</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Payment Gateway</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://wingboyz.ca" target="_blank" class="text-primary hover:text-secondary font-semibold">
+                                View Live Site →
+                            </a>
+                            <span class="text-green-600 text-sm font-semibold">Live Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Delivery App -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-48 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="shopping-bag" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold">Food Delivery App</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            React-based food delivery application with real-time dashboard and integrated payment gateway solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Real-time Dashboard</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Payment Integration</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/harwinderjitsingh" target="_blank" class="text-primary hover:text-secondary font-semibold">
+                                View on GitHub →
+                            </a>
+                            <span class="text-blue-600 text-sm font-semibold">Portfolio Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMS Project -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-r from-green-500 to-teal-500 h-48 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="file-edit" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold">Custom CMS</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Modern content management system built with Next.js and MongoDB featuring lazy loading and SVG animations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Next.js</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">MongoDB</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Lazy Loading</span>
+                            <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-xs">SVG Animations</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/harwinderjitsingh" target="_blank" class="text-primary hover:text-secondary font-semibold">
+                                View on GitHub →
+                            </a>
+                            <span class="text-purple-600 text-sm font-semibold">Custom Build</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/harwinderjitsingh" target="_blank" class="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition-colors transform hover:scale-105">
+                    <i data-lucide="github" class="w-5 h-5 mr-2"></i>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Education</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="bar-chart-2" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Post Graduate Diploma</h3>
+                            <p class="opacity-90">Data Analytics for Business</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-semibold mb-2">St Clair College</p>
+                    <p class="opacity-90 mb-4">Toronto, Canada</p>
+                    <div class="bg-white/20 rounded-lg px-4 py-2 inline-block">
+                        <span class="font-semibold">Jan 2024 - Apr 2025</span>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="book-open" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Master of Computer Applications</h3>
+                            <p class="text-gray-600">Computer Science</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">KCL-IMT</p>
+                    <p class="text-gray-600 mb-4">Punjab, India</p>
+                    <div class="bg-gray-100 rounded-lg px-4 py-2 inline-block">
+                        <span class="font-semibold text-gray-900">Aug 2016 - May 2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Ready to bring your ideas to life? Let's discuss how we can work together to create something amazing.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-gray-800 rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-8 text-center">Contact Information</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Email</p>
+                            <a href="mailto:singhjitharwinder@gmail.com" class="text-primary hover:text-blue-400 transition-colors">
+                                singhjitharwinder@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Phone</p>
+                            <a href="tel:+12268865459" class="text-primary hover:text-blue-400 transition-colors">
+                                +1 (226) 886-5459
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Location</p>
+                            <p class="text-gray-300">Mississauga, Ontario, Canada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/harwinderjitsingh/" target="_blank" class="text-primary hover:text-blue-400 transition-colors">
+                                linkedin.com/in/harwinderjitsingh
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p>&copy; 2025 Harwinderjit Singh. All rights reserved.</p>
+                    <p class="text-gray-400 text-sm">Full Stack Developer & Data Analytics Specialist</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/harwinderjitsingh" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/harwinderjitsingh/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:singhjitharwinder@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
