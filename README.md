@@ -11,6 +11,7 @@ View my interactive resume at:
 ## 👨‍💻 Professional Summary
 Results-driven Software Developer with 4+ years of experience specializing in:
 - Full-stack web development
+- Data Analyst
 - E-commerce platforms
 - Custom WordPress solutions
 - Payment gateway integrations
